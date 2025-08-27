@@ -1,148 +1,140 @@
 document
   .getElementById("Number-card-container")
   .addEventListener("click", function (e) {
-      if (
-          e.target.classList.contains("heart-btn") ||
-          e.target.classList.contains("fa-heart")
-      ) {
-          let heartCountElement = parseInt(
-              document.getElementById("heart-count").innerText
-          );
-          document.getElementById("heart-count").innerText = heartCountElement + 1;
+    if (
+      e.target.classList.contains("heart-btn") ||
+      e.target.classList.contains("fa-heart")
+    ) {
+      let heartCountElement = parseInt(
+        document.getElementById("heart-count").innerText
+      );
+      document.getElementById("heart-count").innerText = heartCountElement + 1;
+    }
+    // Call button Functionality
+    else if (
+      e.target.classList.contains("call-btn") &&
+      getCoinsCounts() >= 20
+    ) {
+      if (e.target.closest(".National-emergency")) {
+        let callNumber = getPhnNumber("National-emergency-number");
+        alert("📞 Calling National Emergency Service " + callNumber + "....");
+        calcCoin();
+        addCallHistory("National Emergency", callNumber);
       }
-      // Call button Functionality
-      else if (
-          e.target.classList.contains("call-btn") &&
-          getCoinsCounts() >= 20
-      ) {
-          if (e.target.closest(".National-emergency")) {
-              let callNumber = getPhnNumber("National-emergency-number");
-              alert("📞 Calling National Emergency Service " + callNumber + "....");
-              calcCoin();
-              addCallHistory("National Emergency", callNumber);
-          }
-          // police help line Call
-          else if (e.target.closest(".Police-helpline")) {
-              let callNumber = getPhnNumber("Police-helpline-number");
-              alert("📞 Calling Police Helpline " + callNumber + "....");
-              calcCoin();
-              addCallHistory("Police Helpline", callNumber);
-          }
-          //  Fire Service Call
-          else if (e.target.closest(".Fire-Service")) {
-              let callNumber = getPhnNumber("Fire-Service-number");
-              alert("📞 Calling Fire Service " + callNumber + "....");
-
-              calcCoin();
-              addCallHistory("Fire Service", callNumber);
-          }
-          //   Ambulance call
-          else if (e.target.closest(".Ambulance-Service")) {
-              let callNumber = getPhnNumber("Ambulance-Service-number");
-              alert("📞 Calling Ambulance Service " + callNumber + "....");
-
-              calcCoin();
-              addCallHistory("Ambulance Service", callNumber);
-          }
-          //   Women & Child call
-          else if (e.target.closest(".WandC-Service")) {
-              let callNumber = getPhnNumber("WandC-Service-number");
-              alert("📞 Calling Women & Child Helpline " + callNumber + "....");
-
-              calcCoin();
-              addCallHistory("Women & Child Helpline", callNumber);
-          }
-          //   Anti-corruption Call
-          else if (e.target.closest(".Anti-corruption-Service")) {
-              let callNumber = getPhnNumber("Anti-corruption-Service-number");
-              alert("📞 Calling Anti-corruption Helpline " + callNumber + "....");
-
-              calcCoin();
-              addCallHistory("Anti-corruption Helpline", callNumber);
-          }
-          //   Electricity Helpline call
-          else if (e.target.closest(".Electricity-Helpline")) {
-              let callNumber = getPhnNumber("Electricity-Helpline-number");
-              alert("📞 Calling Electricity Helpline " + callNumber + "....");
-
-              calcCoin();
-              addCallHistory("Electricity Helpline", callNumber);
-          }
-          //   Brac
-          else if (e.target.closest(".Brac-Helpline")) {
-              let callNumber = getPhnNumber("Brac-Helpline-number");
-              alert("📞 Calling Brac Helpline " + callNumber + "....");
-
-              calcCoin();
-              addCallHistory("Brac Helpline", callNumber);
-          }
-          //   BD railway
-          else if (e.target.closest(".BD-Rail-Service")) {
-              let callNumber = getPhnNumber("BD-Rail-Service-number");
-              alert("📞 Calling Bangladesh Railway Helpline " + callNumber + "....");
-
-              calcCoin();
-              addCallHistory("Bangladesh Railway Helpline", callNumber);
-          }
-      } else if (e.target.classList.contains("call-btn") && getCoinsCounts() < 20) {
-          alert(
-              "❌ Insufficient coins. You need at least 20 coins to make a call."
-          );
+      // police help line Call
+      else if (e.target.closest(".Police-helpline")) {
+        let callNumber = getPhnNumber("Police-helpline-number");
+        alert("📞 Calling Police Helpline " + callNumber + "....");
+        calcCoin();
+        addCallHistory("Police Helpline", callNumber);
       }
-      // Copy functionality
-      else if (e.target.classList.contains("copy-btn")) {
-          if (e.target.closest(".National-emergency")) {
-              let copyNumber = getPhnNumber("National-emergency-number");
-              navigator.clipboard.writeText(copyNumber);
-              alert("✅ Number " + copyNumber + " copied to clipboard.");
-          }
-          else if (e.target.closest(".Police-helpline")) {
-              let copyNumber = getPhnNumber("Police-helpline-number");
-              navigator.clipboard.writeText(copyNumber);
-              alert("✅ Number " + copyNumber + " copied to clipboard.");
-          }
-          else if (e.target.closest(".Fire-Service")) {
-              let copyNumber = getPhnNumber("Fire-Service-number");
-              navigator.clipboard.writeText(copyNumber);
-              alert("✅ Number " + copyNumber + " copied to clipboard.");
-          }
-          else if (e.target.closest(".Ambulance-Service")) {
-              let copyNumber = getPhnNumber("Ambulance-Service-number");
-              navigator.clipboard.writeText(copyNumber);
-              alert("✅ Number " + copyNumber + " copied to clipboard.");
-          }
-          else if (e.target.closest(".WandC-Service")) {
-              let copyNumber = getPhnNumber("WandC-Service-number");
-              navigator.clipboard.writeText(copyNumber);
-              alert("✅ Number " + copyNumber + " copied to clipboard.");
-          }
-          else if (e.target.closest(".Anti-corruption-Service")) {
-              let copyNumber = getPhnNumber("Anti-corruption-Service-number");
-              navigator.clipboard.writeText(copyNumber);
-              alert("✅ Number " + copyNumber + " copied to clipboard.");
-          }
-          else if (e.target.closest(".Electricity-Helpline")) {
-              let copyNumber = getPhnNumber("Electricity-Helpline-number");
-              navigator.clipboard.writeText(copyNumber);
-              alert("✅ Number " + copyNumber + " copied to clipboard.");
-          }
-          else if (e.target.closest(".Brac-Helpline")) {
-              let copyNumber = getPhnNumber("Brac-Helpline-number");
-              navigator.clipboard.writeText(copyNumber);
-              alert("✅ Number " + copyNumber + " copied to clipboard.");
-          }
-          else if (e.target.closest(".BD-Rail-Service")) {
-              let copyNumber = getPhnNumber("BD-Rail-Service-number");
-              navigator.clipboard.writeText(copyNumber);
-              alert("✅ Number " + copyNumber + " copied to clipboard.");
-          }
+      //  Fire Service Call
+      else if (e.target.closest(".Fire-Service")) {
+        let callNumber = getPhnNumber("Fire-Service-number");
+        alert("📞 Calling Fire Service " + callNumber + "....");
+
+        calcCoin();
+        addCallHistory("Fire Service", callNumber);
       }
+      //   Ambulance call
+      else if (e.target.closest(".Ambulance-Service")) {
+        let callNumber = getPhnNumber("Ambulance-Service-number");
+        alert("📞 Calling Ambulance Service " + callNumber + "....");
+
+        calcCoin();
+        addCallHistory("Ambulance Service", callNumber);
+      }
+      //   Women & Child call
+      else if (e.target.closest(".WandC-Service")) {
+        let callNumber = getPhnNumber("WandC-Service-number");
+        alert("📞 Calling Women & Child Helpline " + callNumber + "....");
+
+        calcCoin();
+        addCallHistory("Women & Child Helpline", callNumber);
+      }
+      //   Anti-corruption Call
+      else if (e.target.closest(".Anti-corruption-Service")) {
+        let callNumber = getPhnNumber("Anti-corruption-Service-number");
+        alert("📞 Calling Anti-corruption Helpline " + callNumber + "....");
+
+        calcCoin();
+        addCallHistory("Anti-corruption Helpline", callNumber);
+      }
+      //   Electricity Helpline call
+      else if (e.target.closest(".Electricity-Helpline")) {
+        let callNumber = getPhnNumber("Electricity-Helpline-number");
+        alert("📞 Calling Electricity Helpline " + callNumber + "....");
+
+        calcCoin();
+        addCallHistory("Electricity Helpline", callNumber);
+      }
+      //   Brac
+      else if (e.target.closest(".Brac-Helpline")) {
+        let callNumber = getPhnNumber("Brac-Helpline-number");
+        alert("📞 Calling Brac Helpline " + callNumber + "....");
+
+        calcCoin();
+        addCallHistory("Brac Helpline", callNumber);
+      }
+      //   BD railway
+      else if (e.target.closest(".BD-Rail-Service")) {
+        let callNumber = getPhnNumber("BD-Rail-Service-number");
+        alert("📞 Calling Bangladesh Railway Helpline " + callNumber + "....");
+
+        calcCoin();
+        addCallHistory("Bangladesh Railway Helpline", callNumber);
+      }
+    } else if (
+      e.target.classList.contains("call-btn") &&
+      getCoinsCounts() < 20
+    ) {
+      alert(
+        "❌ Insufficient coins. You need at least 20 coins to make a call."
+      );
+    }
+    // Copy functionality
+    else if (e.target.classList.contains("copy-btn")) {
+      if (e.target.closest(".National-emergency")) {
+        let copyNumber = getPhnNumber("National-emergency-number");
+        copyToClipboard(copyNumber);
+      } else if (e.target.closest(".Police-helpline")) {
+        let copyNumber = getPhnNumber("Police-helpline-number");
+        copyToClipboard(copyNumber);
+      } else if (e.target.closest(".Fire-Service")) {
+        let copyNumber = getPhnNumber("Fire-Service-number");
+        copyToClipboard(copyNumber);
+      } else if (e.target.closest(".Ambulance-Service")) {
+        let copyNumber = getPhnNumber("Ambulance-Service-number");
+        copyToClipboard(copyNumber);
+      } else if (e.target.closest(".WandC-Service")) {
+        let copyNumber = getPhnNumber("WandC-Service-number");
+        copyToClipboard(copyNumber);
+      } else if (e.target.closest(".Anti-corruption-Service")) {
+        let copyNumber = getPhnNumber("Anti-corruption-Service-number");
+        copyToClipboard(copyNumber);
+      } else if (e.target.closest(".Electricity-Helpline")) {
+        let copyNumber = getPhnNumber("Electricity-Helpline-number");
+        copyToClipboard(copyNumber);
+      } else if (e.target.closest(".Brac-Helpline")) {
+        let copyNumber = getPhnNumber("Brac-Helpline-number");
+        copyToClipboard(copyNumber);
+      } else if (e.target.closest(".BD-Rail-Service")) {
+        let copyNumber = getPhnNumber("BD-Rail-Service-number");
+        copyToClipboard(copyNumber);
+      }
+    }
   });
 document.getElementById("clear-btn").addEventListener("click", function () {
   document.getElementById("call-history").innerHTML = "";
 });
 
 // Reusable functions
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text);
+    alert("✅ Number " + text + " copied to clipboard.");
+    document.getElementById("copyCount").innerText = parseInt(document.getElementById("copyCount").innerText) + 1;
+}
+
 function getCoinsCounts() {
   let totalCoin = parseInt(document.getElementById("coin-count").innerText);
   return totalCoin;

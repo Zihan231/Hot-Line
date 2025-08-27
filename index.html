@@ -38,7 +38,9 @@
         <div
           class="flex justify-between items-center md:gap-[10px] md:px-[35px] bg-[#ECFFF0] md:rounded-full px-[12px] text-[10px] gap-[5px] rounded-[20px]"
         >
-          <span id="heart-count" class="inter md:text-[16px] font-black">0</span>
+          <span id="heart-count" class="inter md:text-[16px] font-black"
+            >0</span
+          >
           <img
             class="md:w-[30px] md:h-[30px] w-[15px] h-[15px]"
             src="./assets/heart.png"
@@ -49,7 +51,8 @@
         <div
           class="flex justify-between items-center md:gap-[10px] bg-[#ECFFF0] md:px-[20px] md:py-[12px] md:rounded-full rounded-[20px] px-[12px] text-[10px] gap-[5px]"
         >
-          <span class="inter md:text-[16px] font-black">100</span
+          <span id="coin-count" class="inter md:text-[16px] font-black"
+            >100</span
           ><img
             class="md:w-[24px] md:h-[24px] w-[12px] h-[12px]"
             src="./assets/coin.png"
@@ -85,7 +88,7 @@
     >
       <!-- Left section -->
       <section
-      id="Number-card-container"
+        id="Number-card-container"
         class="grid grid-cols-2 gap-[5px] md:col-span-3 md:grid-cols-3 md:grid-rows-3 md:gap-[15px] parent *:shadow-sm"
       >
         <!-- card 1 -->
@@ -117,23 +120,27 @@
             </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
-            <h1 class="font-bold md:text-[32px]">999</h1>
+            <h1 id="National-emergency-number" class="font-bold md:text-[32px]">
+              999
+            </h1>
             <p
               class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
             >
               All
             </p>
           </div>
-          <div class="flex justify-between items-center gap-[5px]">
+          <div
+            class="flex justify-between items-center gap-[5px] National-emergency"
+          >
             <button
-              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200"
+              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200 copy-btn"
             >
-              <i class="fa-regular fa-copy"></i> Copy
+              <i class="fa-regular fa-copy copy-btn"></i> Copy
             </button>
             <button
-              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700"
+              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700 call-btn"
             >
-              <i class="fa-solid fa-phone"></i> Call
+              <i class="fa-solid fa-phone call-btn"></i> Call
             </button>
           </div>
         </div>
@@ -166,23 +173,23 @@
             </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
-            <h1 class="font-bold md:text-[32px]">999</h1>
+            <h1 id="Police-helpline-number" class="font-bold md:text-[32px]">999</h1>
             <p
               class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
             >
               Police
             </p>
           </div>
-          <div class="flex justify-between items-center gap-[5px]">
+          <div class="flex justify-between items-center gap-[5px] Police-helpline">
             <button
-              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200"
+              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200 copy-btn"
             >
-              <i class="fa-regular fa-copy"></i> Copy
+              <i class="fa-regular fa-copy copy-btn"></i> Copy
             </button>
             <button
-              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700"
+              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700 call-btn"
             >
-              <i class="fa-solid fa-phone"></i> Call
+              <i class="fa-solid fa-phone call-btn"></i> Call
             </button>
           </div>
         </div>
@@ -215,23 +222,23 @@
             </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
-            <h1 class="font-bold md:text-[32px]">999</h1>
+            <h1 id="Fire-Service-number" class="font-bold md:text-[32px]">999</h1>
             <p
               class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
             >
               Fire Service
             </p>
           </div>
-          <div class="flex justify-between items-center gap-[5px]">
+          <div class="flex justify-between items-center gap-[5px] Fire-Service">
             <button
-              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200"
+              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200 copy-btn"
             >
-              <i class="fa-regular fa-copy"></i> Copy
+              <i class="fa-regular fa-copy copy-btn"></i> Copy
             </button>
             <button
-              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700"
+              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700 call-btn"
             >
-              <i class="fa-solid fa-phone"></i> Call
+              <i class="fa-solid fa-phone call-btn"></i> Call
             </button>
           </div>
         </div>
@@ -264,23 +271,23 @@
             </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
-            <h1 class="font-bold md:text-[32px]">1994-999999</h1>
+            <h1 id="Ambulance-Service-number" class="font-bold md:text-[32px]">1994-999999</h1>
             <p
               class="text-[#5C5C5C] bg-gray-100 px-[5px] rounded-xl w-[fit-content]"
             >
               Health
             </p>
           </div>
-          <div class="flex justify-between items-center gap-[5px]">
+          <div class="flex justify-between items-center gap-[5px] Ambulance-Service">
             <button
-              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200"
+              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200 copy-btn"
             >
-              <i class="fa-regular fa-copy"></i> Copy
+              <i class="fa-regular fa-copy copy-btn"></i> Copy
             </button>
             <button
-              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700"
+              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700 call-btn"
             >
-              <i class="fa-solid fa-phone"></i> Call
+              <i class="fa-solid fa-phone call-btn"></i> Call
             </button>
           </div>
         </div>
@@ -313,23 +320,23 @@
             </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
-            <h1 class="font-bold md:text-[32px]">109</h1>
+            <h1 id="WandC-Service-number" class="font-bold md:text-[32px]">109</h1>
             <p
               class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
             >
               Help
             </p>
           </div>
-          <div class="flex justify-between items-center gap-[5px]">
+          <div class="flex justify-between items-center gap-[5px] WandC-Service">
             <button
-              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200"
+              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200 copy-btn"
             >
-              <i class="fa-regular fa-copy"></i> Copy
+              <i class="fa-regular fa-copy copy-btn"></i> Copy
             </button>
             <button
-              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700"
+              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700 call-btn"
             >
-              <i class="fa-solid fa-phone"></i> Call
+              <i class="fa-solid fa-phone call-btn"></i> Call
             </button>
           </div>
         </div>
@@ -362,23 +369,23 @@
             </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
-            <h1 class="font-bold md:text-[32px]">106</h1>
+            <h1 id="Anti-corruption-Service-number" class="font-bold md:text-[32px]">106</h1>
             <p
               class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
             >
               Govt.
             </p>
           </div>
-          <div class="flex justify-between items-center gap-[5px]">
+          <div class="flex justify-between items-center gap-[5px] Anti-corruption-Service">
             <button
-              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200"
+              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200 copy-btn"
             >
-              <i class="fa-regular fa-copy"></i> Copy
+              <i class="fa-regular fa-copy copy-btn"></i> Copy
             </button>
             <button
-              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700"
+              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700 call-btn"
             >
-              <i class="fa-solid fa-phone"></i> Call
+              <i class="fa-solid fa-phone call-btn"></i> Call
             </button>
           </div>
         </div>
@@ -411,23 +418,23 @@
             </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
-            <h1 class="font-bold md:text-[32px]">16216</h1>
+            <h1 id="Electricity-Helpline-number" class="font-bold md:text-[32px]">16216</h1>
             <p
               class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
             >
               Electricity
             </p>
           </div>
-          <div class="flex justify-between items-center gap-[5px]">
+          <div class="flex justify-between items-center gap-[5px] Electricity-Helpline">
             <button
-              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200"
+              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200 copy-btn"
             >
-              <i class="fa-regular fa-copy"></i> Copy
+              <i class="fa-regular fa-copy copy-btn"></i> Copy
             </button>
             <button
-              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700"
+              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700 call-btn"
             >
-              <i class="fa-solid fa-phone"></i> Call
+              <i class="fa-solid fa-phone call-btn"></i> Call
             </button>
           </div>
         </div>
@@ -456,23 +463,23 @@
             <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">Brac</p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
-            <h1 class="font-bold md:text-[32px]">16445</h1>
+            <h1 id="Brac-Helpline-number" class="font-bold md:text-[32px]">16445</h1>
             <p
               class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
             >
               NGO
             </p>
           </div>
-          <div class="flex justify-between items-center gap-[5px]">
+          <div class="flex justify-between items-center gap-[5px] Brac-Helpline">
             <button
-              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200"
+              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200 copy-btn"
             >
-              <i class="fa-regular fa-copy"></i> Copy
+              <i class="fa-regular fa-copy copy-btn"></i> Copy
             </button>
             <button
-              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700"
+              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700 call-btn"
             >
-              <i class="fa-solid fa-phone"></i> Call
+              <i class="fa-solid fa-phone call-btn"></i> Call
             </button>
           </div>
         </div>
@@ -505,23 +512,23 @@
             </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
-            <h1 class="font-bold md:text-[32px]">163</h1>
+            <h1 id="BD-Rail-Service-number" class="font-bold md:text-[32px]">163</h1>
             <p
               class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
             >
               Travel
             </p>
           </div>
-          <div class="flex justify-between items-center gap-[5px]">
+          <div class="flex justify-between items-center gap-[5px] BD-Rail-Service">
             <button
-              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200"
+              class="flex justify-evenly items-center w-[50%] text-[#5C5C5C] text-[12px] px-[10px] rounded-[8px] border-1 border-gray-300 py-[2px] md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-slate-200 copy-btn"
             >
-              <i class="fa-regular fa-copy"></i> Copy
+              <i class="fa-regular fa-copy copy-btn"></i> Copy
             </button>
             <button
-              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700"
+              class="flex justify-evenly items-center w-[50%] text-white px-[10px] text-[12px] py-[2px] rounded-[8px] bg-[#00A63E] border-gray-300 md:text-[16px] md:justify-center md:gap-[10px] md:py-[6px] hover:bg-green-700 call-btn"
             >
-              <i class="fa-solid fa-phone"></i> Call
+              <i class="fa-solid fa-phone call-btn"></i> Call
             </button>
           </div>
         </div>
@@ -537,52 +544,16 @@
             <i class="fa-regular fa-clock"></i> Call History
           </h2>
           <button
-            class="inter text-white px-[18px] py-[6px] bg-[#00A63E] rounded-full"
+          id="clear-btn"
+            class="inter text-white px-[18px] py-[6px] bg-[#00A63E] rounded-full hover:bg-[#01722a]"
           >
             Clear
           </button>
         </div>
         <!-- Call List -->
-        <div
-          class="border-1 flex justify-between items-center px-[10px] md:px-[5px] py-[5px] mb-[5px] border-gray-200 rounded-lg md:border-none"
-        >
-          <div class="w-[70%]">
-            <h3
-              class="inter text-[12px] md:text-[16px] w-[100%] md:w-[100%] mb-[5px] font-semibold"
-            >
-              Fire Service Number with country code
-            </h3>
-            <p class="text-[#5C5C5C] md:text-[16px]">999</p>
-          </div>
-          <div class="text-[12px] md:text-[16px]">11:36:58 Am</div>
-        </div>
-        <!-- List one End -->
-        <div
-          class="border-1 flex justify-between items-center px-[10px] md:px-[5px] py-[5px] mb-[5px] border-gray-200 rounded-lg md:border-none"
-        >
-          <div class="w-[70%]">
-            <h3
-              class="inter text-[12px] md:text-[16px] w-[100%] md:w-[100%] mb-[5px] font-semibold"
-            >
-              Fire Service Number with country code
-            </h3>
-            <p class="text-[#5C5C5C] md:text-[16px]">999</p>
-          </div>
-          <div class="text-[12px] md:text-[16px]">11:36:58 Am</div>
-        </div>
-        <div
-          class="border-1 flex justify-between items-center px-[10px] md:px-[5px] py-[5px] mb-[5px] border-gray-200 rounded-lg md:border-none"
-        >
-          <div class="w-[70%]">
-            <h3
-              class="inter text-[12px] md:text-[16px] w-[100%] md:w-[100%] mb-[5px] font-semibold"
-            >
-              Fire Service Number with country code
-            </h3>
-            <p class="text-[#5C5C5C] md:text-[16px]">999</p>
-          </div>
-          <div class="text-[12px] md:text-[16px]">11:36:58 Am</div>
-        </div>
+        <ul id="call-history">
+          <!-- Dynamic List -->
+        </ul>        
       </section>
     </section>
     <!-- script Connect -->

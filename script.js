@@ -130,9 +130,19 @@ document.getElementById("clear-btn").addEventListener("click", function () {
 
 // Reusable functions
 function copyToClipboard(text) {
-  navigator.clipboard.writeText(text);
-    alert("✅ Number " + text + " copied to clipboard.");
-    document.getElementById("copyCount").innerText = parseInt(document.getElementById("copyCount").innerText) + 1;
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      alert("✅ Number " + text + " copied to clipboard.");
+      const countEl = document.getElementById("copyCount");
+      if (countEl) {
+        countEl.innerText = parseInt(countEl.innerText || "0") + 1;
+      }
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+      alert("❌ Unable to copy to clipboard.");
+    });
 }
 
 function getCoinsCounts() {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Emergency Service Directory</title>
     <!-- tailwind Cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Link Css -->
@@ -38,7 +38,7 @@
         <div
           class="flex justify-between items-center md:gap-[10px] md:px-[35px] bg-[#ECFFF0] md:rounded-full px-[12px] text-[10px] gap-[5px] rounded-[20px]"
         >
-          <span class="inter md:text-[16px] font-black">0</span>
+          <span id="heart-count" class="inter md:text-[16px] font-black">0</span>
           <img
             class="md:w-[30px] md:h-[30px] w-[15px] h-[15px]"
             src="./assets/heart.png"
@@ -81,34 +81,48 @@
     </section>
     <!-- main -->
     <section
-      class="flex flex-col gap-[10px] md:grid md:grid-cols-4 w-[95%] mx-auto md:mt-[50px] md:mb-[85px] md:gap-[30px] mt-[10px] mb-[40px] "
+      class="flex flex-col gap-[10px] md:grid md:grid-cols-4 w-[95%] mx-auto md:mt-[50px] md:mb-[85px] md:gap-[30px] mt-[10px] mb-[40px]"
     >
       <!-- Left section -->
       <section
-        class="grid grid-cols-2 gap-[5px] md:col-span-3 md:grid-cols-3 md:grid-rows-3 md:gap-[15px] parent *:shadow-sm "
+      id="Number-card-container"
+        class="grid grid-cols-2 gap-[5px] md:col-span-3 md:grid-cols-3 md:grid-rows-3 md:gap-[15px] parent *:shadow-sm"
       >
         <!-- card 1 -->
         <div
           class="bg-white border-1 border-gray-200 px-[10px] rounded-[12px] py-[5px] flex flex-col justify-center md:p-[32px]"
         >
           <div class="flex justify-between mb-[15px]">
-            <div class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center">
-              <img 
-
+            <div
+              class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center"
+            >
+              <img
                 class="w-[65%]"
                 src="./assets/emergency.png"
                 alt="Emergency logo"
               />
             </div>
-            <button class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center"><i class="fa-regular fa-heart"></i></button>
+            <button
+              class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center heart-btn"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
           <div class="mb-[10px]">
-            <h3 class="font-bold text-[12px] md:text-[22px]">National Emergency Number</h3>
-            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">National Emergency</p>
+            <h3 class="font-bold text-[12px] md:text-[22px]">
+              National Emergency Number
+            </h3>
+            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">
+              National Emergency
+            </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
             <h1 class="font-bold md:text-[32px]">999</h1>
-            <p class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]">All</p>
+            <p
+              class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
+            >
+              All
+            </p>
           </div>
           <div class="flex justify-between items-center gap-[5px]">
             <button
@@ -128,23 +142,36 @@
           class="bg-white border-1 border-gray-200 px-[10px] rounded-[12px] py-[5px] flex flex-col justify-center md:p-[32px]"
         >
           <div class="flex justify-between mb-[15px]">
-            <div class="bg-[#DFEFFF] rounded-xl w-[50px] h-[50px] flex justify-center items-center">
-              <img 
-
+            <div
+              class="bg-[#DFEFFF] rounded-xl w-[50px] h-[50px] flex justify-center items-center"
+            >
+              <img
                 class="w-[65%]"
                 src="./assets/police.png"
                 alt="Emergency logo"
               />
             </div>
-            <button class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center"><i class="fa-regular fa-heart"></i></button>
+            <button
+              class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center heart-btn"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
           <div class="mb-[10px]">
-            <h3 class="font-bold text-[12px] md:text-[22px]">Police Helpline Number</h3>
-            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">Police</p>
+            <h3 class="font-bold text-[12px] md:text-[22px]">
+              Police Helpline Number
+            </h3>
+            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">
+              Police
+            </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
             <h1 class="font-bold md:text-[32px]">999</h1>
-            <p class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]">Police</p>
+            <p
+              class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
+            >
+              Police
+            </p>
           </div>
           <div class="flex justify-between items-center gap-[5px]">
             <button
@@ -164,23 +191,36 @@
           class="bg-white border-1 border-gray-200 px-[10px] rounded-[12px] py-[5px] flex flex-col justify-center md:p-[32px]"
         >
           <div class="flex justify-between mb-[15px]">
-            <div class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center">
-              <img 
-
+            <div
+              class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center"
+            >
+              <img
                 class="w-[65%]"
                 src="./assets/fire-service.png"
                 alt="Emergency logo"
               />
             </div>
-            <button class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center"><i class="fa-regular fa-heart"></i></button>
+            <button
+              class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center heart-btn"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
           <div class="mb-[10px]">
-            <h3 class="font-bold text-[12px] md:text-[22px]">Fire Service Number</h3>
-            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">Fire Service</p>
+            <h3 class="font-bold text-[12px] md:text-[22px]">
+              Fire Service Number
+            </h3>
+            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">
+              Fire Service
+            </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
             <h1 class="font-bold md:text-[32px]">999</h1>
-            <p class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]">Fire Service</p>
+            <p
+              class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
+            >
+              Fire Service
+            </p>
           </div>
           <div class="flex justify-between items-center gap-[5px]">
             <button
@@ -200,23 +240,36 @@
           class="bg-white border-1 border-gray-200 px-[10px] rounded-[12px] py-[5px] flex flex-col justify-center md:p-[32px]"
         >
           <div class="flex justify-between mb-[15px]">
-            <div class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center">
-              <img 
-
+            <div
+              class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center"
+            >
+              <img
                 class="w-[65%]"
                 src="./assets/ambulance.png"
                 alt="Emergency logo"
               />
             </div>
-            <button class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center"><i class="fa-regular fa-heart"></i></button>
+            <button
+              class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center heart-btn"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
           <div class="mb-[10px]">
-            <h3 class="font-bold text-[12px] md:text-[22px]">Ambulance Number</h3>
-            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">Ambulance</p>
+            <h3 class="font-bold text-[12px] md:text-[22px]">
+              Ambulance Number
+            </h3>
+            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">
+              Ambulance
+            </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
             <h1 class="font-bold md:text-[32px]">1994-999999</h1>
-            <p class="text-[#5C5C5C] bg-gray-100 px-[5px] rounded-xl w-[fit-content]">Health</p>
+            <p
+              class="text-[#5C5C5C] bg-gray-100 px-[5px] rounded-xl w-[fit-content]"
+            >
+              Health
+            </p>
           </div>
           <div class="flex justify-between items-center gap-[5px]">
             <button
@@ -236,23 +289,36 @@
           class="bg-white border-1 border-gray-200 px-[10px] rounded-[12px] py-[5px] flex flex-col justify-center md:p-[32px]"
         >
           <div class="flex justify-between mb-[15px]">
-            <div class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center">
-              <img 
-
-                class="w-[65%]"
-                src="./assets/emergency.png"
+            <div
+              class="bg-blue-100 rounded-xl w-[50px] h-[50px] flex justify-center items-center"
+            >
+              <img
+                class="w-[100%]"
+                src="./assets/109-helpline.png"
                 alt="Emergency logo"
               />
             </div>
-            <button class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center"><i class="fa-regular fa-heart"></i></button>
+            <button
+              class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center heart-btn"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
           <div class="mb-[10px]">
-            <h3 class="font-bold text-[12px] md:text-[22px]">Women & Child Helpline</h3>
-            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">Women & Child Helpline</p>
+            <h3 class="font-bold text-[12px] md:text-[22px]">
+              Women & Child Helpline
+            </h3>
+            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">
+              Women & Child Helpline
+            </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
             <h1 class="font-bold md:text-[32px]">109</h1>
-            <p class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]">Help</p>
+            <p
+              class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
+            >
+              Help
+            </p>
           </div>
           <div class="flex justify-between items-center gap-[5px]">
             <button
@@ -272,23 +338,36 @@
           class="bg-white border-1 border-gray-200 px-[10px] rounded-[12px] py-[5px] flex flex-col justify-center md:p-[32px]"
         >
           <div class="flex justify-between mb-[15px]">
-            <div class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center">
-              <img 
-
+            <div
+              class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center"
+            >
+              <img
                 class="w-[65%]"
                 src="./assets/emergency.png"
                 alt="Emergency logo"
               />
             </div>
-            <button class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center"><i class="fa-regular fa-heart"></i></button>
+            <button
+              class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center heart-btn"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
           <div class="mb-[10px]">
-            <h3 class="font-bold text-[12px] md:text-[22px]">Anti-Corruption Helpline</h3>
-            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">Anti-Corruption</p>
+            <h3 class="font-bold text-[12px] md:text-[22px]">
+              Anti-Corruption Helpline
+            </h3>
+            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">
+              Anti-Corruption
+            </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
             <h1 class="font-bold md:text-[32px]">106</h1>
-            <p class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]">Govt.</p>
+            <p
+              class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
+            >
+              Govt.
+            </p>
           </div>
           <div class="flex justify-between items-center gap-[5px]">
             <button
@@ -308,23 +387,36 @@
           class="bg-white border-1 border-gray-200 px-[10px] rounded-[12px] py-[5px] flex flex-col justify-center md:p-[32px]"
         >
           <div class="flex justify-between mb-[15px]">
-            <div class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center">
-              <img 
-
+            <div
+              class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center"
+            >
+              <img
                 class="w-[65%]"
                 src="./assets/emergency.png"
                 alt="Emergency logo"
               />
             </div>
-            <button class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center"><i class="fa-regular fa-heart"></i></button>
+            <button
+              class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center heart-btn"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
           <div class="mb-[10px]">
-            <h3 class="font-bold text-[12px] md:text-[22px]">Electricity Helpline</h3>
-            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">Electricity Outage</p>
+            <h3 class="font-bold text-[12px] md:text-[22px]">
+              Electricity Helpline
+            </h3>
+            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">
+              Electricity Outage
+            </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
             <h1 class="font-bold md:text-[32px]">16216</h1>
-            <p class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]">Electricity</p>
+            <p
+              class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
+            >
+              Electricity
+            </p>
           </div>
           <div class="flex justify-between items-center gap-[5px]">
             <button
@@ -344,15 +436,20 @@
           class="bg-white border-1 border-gray-200 px-[10px] rounded-[12px] py-[5px] flex flex-col justify-center md:p-[32px]"
         >
           <div class="flex justify-between mb-[15px]">
-            <div class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center">
-              <img 
-
+            <div
+              class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center"
+            >
+              <img
                 class="w-[65%]"
-                src="./assets/emergency.png"
+                src="./assets/brac.png"
                 alt="Emergency logo"
               />
             </div>
-            <button class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center"><i class="fa-regular fa-heart"></i></button>
+            <button
+              class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center heart-btn"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
           <div class="mb-[10px]">
             <h3 class="font-bold text-[12px] md:text-[22px]">Brac Helpline</h3>
@@ -360,7 +457,11 @@
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
             <h1 class="font-bold md:text-[32px]">16445</h1>
-            <p class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]">NGO</p>
+            <p
+              class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
+            >
+              NGO
+            </p>
           </div>
           <div class="flex justify-between items-center gap-[5px]">
             <button
@@ -380,23 +481,36 @@
           class="bg-white border-1 border-gray-200 px-[10px] rounded-[12px] py-[5px] flex flex-col justify-center md:p-[32px]"
         >
           <div class="flex justify-between mb-[15px]">
-            <div class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center">
-              <img 
-
+            <div
+              class="bg-[#FFE3E2] rounded-xl w-[50px] h-[50px] flex justify-center items-center"
+            >
+              <img
                 class="w-[65%]"
-                src="./assets/emergency.png"
+                src="./assets/Bangladesh-Railway.png"
                 alt="Emergency logo"
               />
             </div>
-            <button class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center"><i class="fa-regular fa-heart"></i></button>
+            <button
+              class="hover:bg-red-300 h-[30px] w-[30px] rounded-full flex justify-center items-center heart-btn"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
           <div class="mb-[10px]">
-            <h3 class="font-bold text-[12px] md:text-[22px]">Bangladesh Railway Helpline</h3>
-            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">Bangladesh Railway</p>
+            <h3 class="font-bold text-[12px] md:text-[22px]">
+              Bangladesh Railway Helpline
+            </h3>
+            <p class="text-[#5C5C5C] text-[9px] roboto md:text-[18px]">
+              Bangladesh Railway
+            </p>
           </div>
           <div class="flex justify-between mb-[10px] md:flex-col">
             <h1 class="font-bold md:text-[32px]">163</h1>
-            <p class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]">Travel</p>
+            <p
+              class="text-[#5C5C5C] bg-gray-200 px-[5px] rounded-xl w-[fit-content]"
+            >
+              Travel
+            </p>
           </div>
           <div class="flex justify-between items-center gap-[5px]">
             <button
@@ -419,7 +533,7 @@
       >
         <!-- title section -->
         <div class="flex justify-between items-center mb-[8px]">
-          <h2 class="roboto font-bold text-[16px] md:text-[20px]">
+          <h2 class="roboto font-medium text-[16px] md:text-[20px]">
             <i class="fa-regular fa-clock"></i> Call History
           </h2>
           <button
@@ -471,5 +585,7 @@
         </div>
       </section>
     </section>
+    <!-- script Connect -->
+    <script src="script.js"></script>
   </body>
 </html>
